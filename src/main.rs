@@ -1,3 +1,4 @@
+use std::io;
 // use std::collections::HashSet;
 // use std::collections::HashMap;
 use variables::print_variables;
@@ -70,6 +71,29 @@ fn main() {
     //Function
     print();
     print_variables();
+
+    let a = [1, 2, 3, 4, 5];
+
+    println!("Please enter an array index.");
+
+    let mut index = String::new();
+
+    // We use .expect to give an error message
+    // Also .parse to convert the input in the variable type that is expected
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+
+    let element = a[index];
+
+    println!("The value of the element at index {index} is: {element}");
+
+
 }
 fn print(){
     println!("Hello, world!");

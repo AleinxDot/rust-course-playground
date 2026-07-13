@@ -1,10 +1,4 @@
-fn main() {
-    let mut x = 5;
-    println!("The value of x is: {}", x);
-    x = 6;
-    println!("The value of x is: {}", x);
-}
-fn print_variables(){
+pub fn print_variables(){
     let mut x = 5;
     println!("The value of x is: {}", x);
     x = 6;

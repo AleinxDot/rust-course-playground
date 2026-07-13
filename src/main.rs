@@ -1,5 +1,6 @@
-use std::collections::HashSet;
-use std::collections::HashMap;
+// use std::collections::HashSet;
+// use std::collections::HashMap;
+use variables::print_variables;
 
 mod variables;
 
@@ -39,38 +40,39 @@ fn main() {
 
     // List
 
-    let mut my_list: Vec<&str> = vec![my_string,"Hello"];
-    my_list.push("world");
-    println!("{}", my_list.join(""));
-    println!("my_list[0]: {}", my_list[0]);
+    // let mut my_list: Vec<&str> = vec![my_string,"Hello"];
+    // my_list.push("world");
+    // println!("{}", my_list.join(""));
+    // println!("my_list[0]: {}", my_list[0]);
 
-    //Sets
-
-    let mut my_set: HashSet<&str> = vec!["Hello", "world"].into_iter().collect();
-    my_set.insert("Hello");
-    println!("my_set: {:?}", my_set);
-
-    //Maps
-    let mut my_map: HashMap<&str, i32> = vec![("Hello", 1), ("world", 2)]
-        .into_iter()
-        .collect();
-    my_map.insert("Hello", 3);
-    println!("my_map: {:?}", my_map);
-
-    //Bucles
-    // For
-    for (key, value) in &my_map{
-        println!("{}: {}", key, value);
-    }
+    // //Sets
+    //
+    // let mut my_set: HashSet<&str> = vec!["Hello", "world"].into_iter().collect();
+    // my_set.insert("Hello");
+    // println!("my_set: {:?}", my_set);
+    //
+    // //Maps
+    // let mut my_map: HashMap<&str, i32> = vec![("Hello", 1), ("world", 2)]
+    //     .into_iter()
+    //     .collect();
+    // my_map.insert("Hello", 3);
+    // println!("my_map: {:?}", my_map);
+    //
+    // //Bucles
+    // // For
+    // for (key, value) in &my_map{
+    //     println!("{}: {}", key, value);
+    // }
     // While
-    while let Some(value) = my_map.get("Hello") {
-        println!("{}", value);
-    }
+    // while let Some(value) = my_map.get("Hello") {
+    //     println!("{}", value);
+    // }
     //Function
     print();
-
+    print_variables();
 }
 fn print(){
     println!("Hello, world!");
     println!("Rem hijo de la remil");
 }
+

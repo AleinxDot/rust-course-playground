@@ -4,6 +4,7 @@ use std::io;
 use variables::print_variables;
 
 mod variables;
+mod patterns_and_matching;
 
 fn main() {
 
@@ -93,6 +94,12 @@ fn main() {
 
     println!("The value of the element at index {index} is: {element}");
 
+    //Patterns
+    patterns_and_matching::patterns();
+    patterns_and_matching::matching_names_var();
+    patterns_and_matching::matching_multiple_patterns();
+    patterns_and_matching::matching_ranges_with_periods();
+    patterns_and_matching::matching_structs();
 
 }
 fn print(){

@@ -74,3 +74,10 @@ pub fn matching_structs() {
         Point { x, y } => println!("On neither axis: ({}, {})", x, y),
     }
 }
+pub fn fib(n: u32) -> u32 {
+    if n < 2 {
+        n
+    } else {
+        fib(n - 1) + fib(n - 2)
+    }
+}

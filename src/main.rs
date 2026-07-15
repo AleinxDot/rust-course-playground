@@ -2,9 +2,11 @@ use std::io;
 // use std::collections::HashSet;
 // use std::collections::HashMap;
 use variables::print_variables;
+use crate::patterns_and_matching::fib;
 
 mod variables;
 mod patterns_and_matching;
+mod constructs;
 
 fn main() {
 
@@ -39,6 +41,8 @@ fn main() {
     else {
         println!("The value of my_int is not: {}", MY_CONSTANT);
     }
+
+    println!("The value of fib(3) is: {}", fib(8));
 
     // List
 
